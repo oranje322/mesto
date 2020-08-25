@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  max-width: 894px;
+  margin: 0 auto;
+}
+
+.header__container {
+  max-width: 882px;
+  margin: 0 auto;
+}
+
+/* --------------------header ----------------- */
+
+/* .logo {
+  margin-top: 45px;
+} */
+
+.logo-img {
+  margin-top: 45px;
+}
+
+.logo:after {
+  margin-top: 45px;
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #545454;
+}
+
+/* --------------------profile ----------------- */
+
+.profile {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+}
+
+.profile__info {
+  display: flex;
+  align-items: center;
+}
+
+.profile__bio {
+  margin-left: 30px;
+}
+
+.profile__fullname {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fullname-head {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 56px;
+  margin-right: 16px;
+}
+
+.bio__text {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.edit-btn {
+  min-width: 24px;
+  min-height: 24px;
+  border: 1px solid white;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-image: url(./img/editbtn.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 50%;
+  outline: none;
+}
+
+.edit-btn:hover {
+  opacity: 0.6;
+}
+
+.add-btn {
+  min-width: 150px;
+  min-height: 50px;
+  border: 1px solid white;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-image: url(./img/addbtn.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 50%;
+  outline: none;
+}
+
+.add-btn:hover {
+  opacity: 0.6;
+}
+
+/* --------------------gallery ----------------- */
+
+.gallery {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+  grid-gap: 20px 18px;
+  padding: 0 6px;
+}
+
+.card {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__photo-container {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.card__photo {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  position: absolute;
+}
+
+.card__info {
+  background-color: #fff;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 15px 31px 21px;
+}
+
+.card__info-name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.like-btn {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-image: url(./img/likebtn.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 50%;
+  outline: none;
+}
+
+.like-btn:hover {
+  opacity: 0.6;
+}
+
+.like-btn.activeLikebtn {
+  background-image: url(./img/likeactive.svg);
+}
+
+.delete-btn {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-image: url(./img/musor.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 50%;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  z-index: 10;
+  outline: none;
+}
+
+.delete-btn:hover {
+  opacity: 0.6;
+}
+
+.footer {
+  margin: 66px 0 60px 0;
+}
+
+.footer-text {
+  font-size: 18px;
+  line-height: 22px;
+  color: #545454;
+}
+
+/* --------------------modal ----------------- */
+
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all .5s ease-out;
+  padding: 5px;
+}
+
+.edit-profile {
+  display: flex;
+  flex-direction: column;
+  padding: 36px;
+  background-color: #fff;
+  align-items: center;
+  position: relative;
+}
+
+.edit-profile__heading {
+  color: black;
+  margin-bottom: 50px;
+}
+
+.edit-profile__input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding: 8px;
+  width: 100%;
+}
+
+.edit-profile__input:focus {
+  box-shadow: 0 0 10px 5px rgb(168, 163, 163);
+}
+
+
+.edit-profile__save-btn {
+  background: black;
+  border-radius: 2px;
+  color: white;
+  width: 100%;
+  padding: 18px 125px 18px 125px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-profile__save-btn:hover {
+  opacity: 0.8;
+}
+
+.edit-profile__close-btn {
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-image: url(./img/close.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 50%;
+  z-index: 10;
+  outline: none;
+}
+
+/* --------------------modal photo ----------------- */
+
+.photo-modal {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.photo-modal-content {
+  position: relative;
+  padding: 5px;
+}
+
+
+
+.modal-photo {
+  display: block;
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  
+}
+
+.modal-photo-info {
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  margin-top: 10px;
+
+}
+
+/* adaptive */
+
+@media screen and (max-width: 769px) {
+  /* header */
+  .container {
+    width: 100%;
+    padding: 0 18px;
+  }
+  .logo-img {
+    padding: 0 28px 32px;
+  }
+  .logo:after {
+    margin-top: 0;
+  }
+  /* profile */
+  .profile {
+    flex-direction: column;
+  }
+  .profile__info {
+    flex-direction: column;
+    margin: 0 0 36px;
+  }
+  .profile__add {
+    width: 100%;
+  }
+  .add-btn {
+    width: 100%;
+  }
+  .fullname-head {
+    font-size: 27px;
+  line-height: 56px;
+  }
+  .bio__text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  /* gallery */
+
+  /* modal */
+  .edit-profile__close-btn {
+    top: -22px;
+    right: -5px;
+  }
+}
+
+
+
+@media screen and (max-width: 559px) {
+  .logo {
+    
+  }
+}

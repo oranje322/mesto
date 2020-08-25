@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Mesto</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <div class="logo">
+          <img class='logo-img' src="img/logo.svg" alt="logo" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="content">
+          <div class="profile">
+            <div class="profile__info">
+              <div class="profile__img">
+                <img src="img/Avatar.png" alt="Avatar" />
+              </div>
+              <div class="profile__bio">
+                <div class="profile__fullname">
+                  <h1 class="fullname-head">Жак-Ив Кусто</h1>
+                  <button class="edit-btn"></button>
+                </div>
+                <p class="bio__text">Исследователь океана</p>
+              </div>
+            </div>
+            <div class="profile__add">
+              <button class="add-btn"></button>
+            </div>
+          </div>
+
+          <div class="gallery">
+            <div class="card">
+              <div class="card__photo-container">
+                <img class="card__photo" src="img/elbrus.jpg" alt="elbrus" />
+              </div>
+              <div class="card__info">
+                <p class="card__info-name">Эльбрус</p>
+                <button class="like-btn"></button>
+              </div>
+              <button class="delete-btn"></button>
+            </div>
+
+            <div class="card">
+              <div class="card__photo-container">
+                <img class="card__photo" src="img/kamchatka.jpg" alt="elbrus" />
+              </div>
+              <div class="card__info">
+                <p class="card__info-name">Долина Гейзеров</p>
+                <button class="like-btn"></button>
+              </div>
+              <button class="delete-btn"></button>
+            </div>
+
+            <div class="card">
+              <div class="card__photo-container">
+                <img class="card__photo" src="img/komi.jpg" alt="elbrus" />
+              </div>
+              <div class="card__info">
+                <p class="card__info-name">Столбы выветривания</p>
+                <button class="like-btn"></button>
+              </div>
+              <button class="delete-btn"></button>
+            </div>
+
+            <div class="card">
+              <div class="card__photo-container">
+                <img
+                  class="card__photo"
+                  src="img/kraskoyrskiykray.jpg"
+                  alt="elbrus"
+                />
+              </div>
+              <div class="card__info">
+                <p class="card__info-name">Кинзелюкский водопад</p>
+                <button class="like-btn"></button>
+              </div>
+              <button class="delete-btn"></button>
+            </div>
+
+            <div class="card">
+              <div class="card__photo-container">
+                <img class="card__photo" src="img/saha.jpg" alt="elbrus" />
+              </div>
+              <div class="card__info">
+                <p class="card__info-name">Ленские столбы</p>
+                <button class="like-btn"></button>
+              </div>
+              <button class="delete-btn"></button>
+            </div>
+
+            <div class="card">
+              <div class="card__photo-container">
+                <img class="card__photo" src="img/altay.jpg" alt="elbrus" />
+              </div>
+              <div class="card__info">
+                <p class="card__info-name">Гора Белуха</p>
+                <button class="like-btn"></button>
+              </div>
+              <button class="delete-btn"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <p class="footer-text">© 2020 Mesto Russia</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="editProfileModal" class="modal">
+     
+        <form class="edit-profile" name='editProfileForm'>
+          <h2 class="edit-profile__heading">Редактировать профиль</h2>
+          <input name='editProfileName' class="edit-profile__input" type="text" placeholder="Имя" />
+          <input
+            name='editProfileRod'
+            class="edit-profile__input"
+            type="text"
+            placeholder="Род деятельности"
+          />
+          <button id='editProfileBtn' class="edit-profile__save-btn">Сохранить</button>
+          <button class="edit-profile__close-btn"></button>
+        </form>
+        
+      
+    </div>
+
+    <div id='addNewPlace' class="modal">
+     
+        <form class='edit-profile' name='addNewPlaceForm'>
+          <h2 class="edit-profile__heading">Новое место</h2>
+          <input name='addNewPlaceName' class="edit-profile__input" type="text" placeholder="Название" />
+          <input
+            name='addNewPlaceUrl'
+            class="edit-profile__input"
+            type="text"
+            placeholder="Ссылка на картинку"
+          />
+          <button id='createCardBtn' class="edit-profile__save-btn">Создать</button>
+          <button class="edit-profile__close-btn"></button>
+        </form>
+        
+     
+    </div>
+
+    <div id='photoModal' class="modal photo-modal">
+      <div class="photo-modal-content">
+        <figure class="modal-photo-view">
+          <img src="https://cdn.pixabay.com/photo/2017/02/07/16/47/kingfisher-2046453_960_720.jpg" alt="" class="modal-photo">
+          <figcaption class="modal-photo-info">
+            opisanie
+          </figcaption>
+        </figure>
+        <button class="edit-profile__close-btn"></button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
