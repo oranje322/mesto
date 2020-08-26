@@ -51,6 +51,7 @@ closeEditModalBtn.forEach((btn) => {
       e.preventDefault();
     editProfileModal.classList.remove("open");
     addNewPlaceModal.classList.remove("open");
+    photoModal.classList.remove('open');
   });
 });
 
