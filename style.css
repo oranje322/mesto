@@ -28,6 +28,7 @@ body {
 
 .logo-img {
   margin-top: 45px;
+  margin-left: 30px;
 }
 
 .logo:after {
@@ -127,6 +128,7 @@ body {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  max-width: 282px;
 }
 
 .card__photo-container {
@@ -315,7 +317,7 @@ body {
   max-width: 100%;
   max-height: 75vh;
   object-fit: contain;
-  
+
 }
 
 .modal-photo-info {
@@ -329,41 +331,54 @@ body {
 /* adaptive */
 
 @media screen and (max-width: 769px) {
+
   /* header */
   .container {
     width: 100%;
     padding: 0 18px;
   }
+
   .logo-img {
     padding: 0 28px 32px;
   }
+
   .logo:after {
     margin-top: 0;
   }
+
   /* profile */
   .profile {
     flex-direction: column;
   }
+
   .profile__info {
     flex-direction: column;
     margin: 0 0 36px;
   }
+
   .profile__add {
     width: 100%;
   }
+
   .add-btn {
     width: 100%;
   }
+
   .fullname-head {
     font-size: 27px;
-  line-height: 56px;
+    line-height: 56px;
   }
+
   .bio__text {
     font-size: 14px;
     line-height: 17px;
   }
 
+ 
   /* gallery */
+  .card {
+    max-width: none;
+  }
 
   /* modal */
   .edit-profile__close-btn {
@@ -375,7 +390,5 @@ body {
 
 
 @media screen and (max-width: 559px) {
-  .logo {
-    
-  }
+  .logo {}
 }

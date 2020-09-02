@@ -72,11 +72,15 @@ gallery.addEventListener('click', function (e) {
         card.remove();
         return;
     }
-    // открытие модалки с кортачкой
-    if(card.contains(e.target)) {
+    
+    if (card !== null) {
+      if(card.contains(e.target)) {
+     
       
-      openModalImg(card)
+        openModalImg(card)
+      }
     }
+    
 
     
 });
